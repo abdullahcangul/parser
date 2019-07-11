@@ -11,7 +11,6 @@ public class ResultModel {
     private String ipAdresses2;
 
 
-
     public static class Builder {
 
         private String domain;

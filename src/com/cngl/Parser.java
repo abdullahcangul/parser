@@ -37,17 +37,17 @@ public class Parser {
         //100
        Integer max=Integer.parseInt(parts[1]);
       //192,168,1,2
-       String[] parcalarforMin=parts[0].split("[.]");
+       String[] partsForMin=parts[0].split("[.]");
         //2
-       Integer min=Integer.parseInt(parcalarforMin[parcalarforMin.length-1]);
+       Integer min=Integer.parseInt(partsForMin[partsForMin.length-1]);
        //192.168.1
        String firstPart=parts[0].substring( 0,parts[0].lastIndexOf(".")+1);
        //en küçükden en büyüge listeye alma
-       List<String> hepsi=new ArrayList<>();
+       List<String> list=new ArrayList<>();
        for (int i=min;i<=max;i++){
-            hepsi.add(firstPart+i);
+           list.add(firstPart+i);
        }
-       return hepsi;
+       return list;
     }
     
     private List<String> smash4(String s) {
